@@ -25,9 +25,9 @@
 
 
 #### 项目源码
-|     |   后端源码  |   前端源码  |
-|---  |--- | --- |
-|  github   |  https://github.com/openstack-test/kubespace   |  https://github.com/openstack-test/kubespace/tree/master/luban_fe   |
+|     | 后端源码             | 前端源码          |
+|---  |------------------|---------------|
+|  github   | kubespace/server | kubespace/web |
 
 
 ## 使用说明
@@ -35,20 +35,9 @@
 ```shell script
 # 拉取代码
 git clone git@github.com:openstack-test/kubespace.git
-
-# 打包
-cd kubespace
-go build main.go -o ./server
-
-# 启动
-./server
-
-# 启动前端
-cd kubespace/kubespace_fe
-npm run dev
 ```
 
-2. 启动服务前先创建etc/config.yaml
+2. 启动服务前先创建server/etc/config.yaml, 数据库部分配置如下
 ```shell script
 # 数据库配置
 mysql:
@@ -58,11 +47,38 @@ mysql:
   password: '123456'
 ```
 
-3. 初始化数据库
-```go
-windows执行以下脚本, 初始化数据库
+3. 初始化数据, 将`server/sql/init_data.sql`文件导入到mysql数据库kubespace中。
 
-init_db.bat
+
+4. 启动服务
+```shell
+# 启动后端
+cd kubespace/server
+go run main.go
+
+# 启动前端
+cd kubespace/web
+# 安装依赖
+npm install --registry=https://registry.npm.taobao.org
+npm run dev
+```
+
+5. 访问。默认用户名admin@123.com，密码123456
+
+http://localhost:8080  
+
+备注：先生成自定义密码的hash值, 然后替换掉users表中的password值。
+``` go
+package main
+import (
+	"golang.org/x/crypto/bcrypt"
+)
+
+func main() {
+	pwd := []byte("123456")
+	hash, _ := bcrypt.GenerateFromPassword(pwd, bcrypt.DefaultCost)
+	println("hash加密密码: ", string(hash))
+}
 ```
 
 #### 目前已经实现的功能
