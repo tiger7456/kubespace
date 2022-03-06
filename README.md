@@ -21,32 +21,30 @@
   </a>
 </p>
 
-> KubeSpace运维平台， 本项目使用Go1.15.x、 Gin、Gorm开发， 前端使用的是Vue3+Ant Design2.2.x框架。
+> KubeSpace运维平台项目使用Go1.15.x、 Gin、Gorm开发， 前端使用的是Vue3+Ant Design2.2.x框架。
 
 
 #### 项目源码
 |     |   后端源码  |   前端源码  |
 |---  |--- | --- |
-|  github   |  https://github.com/xuchao918/kubespace   |  https://github.com/xuchao918/kubespace/tree/master/luban_fe   |
+|  github   |  https://github.com/openstack-test/kubespace   |  https://github.com/openstack-test/kubespace/tree/master/luban_fe   |
 
 
 ## 使用说明
 1. 安装编译
 ```shell script
 # 拉取代码
-git clone git@github.com:xuchao918/kubespace.git
+git clone git@github.com:openstack-test/kubespace.git
 
 # 打包
-cd luban
-go build main.go -o ./luban
-or
-GOOS=windows GOARCH=amd64 go build main.go ./luban
+cd kubespace
+go build main.go -o ./server
 
 # 启动
-./luban
+./server
 
 # 启动前端
-cd luban/luban_fe
+cd kubespace/kubespace_fe
 npm run dev
 ```
 
