@@ -145,7 +145,7 @@
                   <a-avatar src="https://static-legacy.dingtalk.com/media/lADPBbCc1s5jzxHNBLnNBNo_1242_1209.jpg" icon="user">
                   </a-avatar>
                 </a-badge>
-                <span style="padding-left: 8px;"> 张三</span>
+                <span style="padding-left: 8px;"> Admin</span>
               </span>
 
               <template v-slot:overlay>
@@ -179,13 +179,8 @@
       </a-layout-content>
       <a-layout-footer :style="{ textAlign: 'center' }">
         <a-space :size="14">
-        <a href="#">官网</a>
-          <a href="https://github.com/dnsjia/luban">
-            <GithubOutlined/>
-          </a>
-        <a href="#">文档</a>
         </a-space><br/>
-        Copyright ©2020 By LuBan Ops.
+        Copyright ©KubeSpace
       </a-layout-footer>
 
 
@@ -199,7 +194,7 @@ import {
   LogoutOutlined,
   UserOutlined,
   createFromIconfontCN,
-  GithubOutlined,
+  //GithubOutlined,
 } from '@ant-design/icons-vue';
 import {defineComponent, ref} from 'vue';
 import router from "./router";
@@ -230,7 +225,7 @@ export default defineComponent({
     IconFont,
     LogoutOutlined,
     UserOutlined,
-    GithubOutlined,
+    //GithubOutlined,
   },
 });
 </script>
