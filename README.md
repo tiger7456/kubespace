@@ -51,7 +51,7 @@ mysql:
 
 
 4. 启动服务
-```go
+```shell
 # 启动后端
 cd kubespace/server
 go run main.go
