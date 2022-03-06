@@ -1,23 +1,23 @@
 .idea/
 
-luban_fe/dist
-luban_fe/node_modules
+web/dist
+web/node_modules
 
 # Log files
-luban_fe/npm-debug.log*
-luban_fe/yarn-debug.log*
-luban_fe/yarn-error.log*
-luban_fe/pnpm-debug.log*
+web/npm-debug.log*
+web/yarn-debug.log*
+web/yarn-error.log*
+web/pnpm-debug.log*
 
-logs/*.log
-*.log
+server/logs/*.log
+server/*.log
 .DS_Store
 .vscode
 *.sw?
 gin.log
 /latest_log
-/etc/config.yaml
-/gin.log
-/gva.exe
-/server.exe
+server/etc/config.yaml
+server/gin.log
+server/gva.exe
+server/server.exe
 *.out

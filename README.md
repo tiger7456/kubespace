@@ -25,9 +25,9 @@
 
 
 #### 项目源码
-|     |   后端源码  |   前端源码  |
-|---  |--- | --- |
-|  github   |  https://github.com/openstack-test/kubespace   |  https://github.com/openstack-test/kubespace/tree/master/luban_fe   |
+|     | 后端源码             | 前端源码          |
+|---  |------------------|---------------|
+|  github   | kubespace/server | kubespace/web |
 
 
 ## 使用说明
@@ -35,20 +35,9 @@
 ```shell script
 # 拉取代码
 git clone git@github.com:openstack-test/kubespace.git
-
-# 打包
-cd kubespace
-go build main.go -o ./server
-
-# 启动
-./server
-
-# 启动前端
-cd kubespace/kubespace_fe
-npm run dev
 ```
 
-2. 启动服务前先创建etc/config.yaml
+2. 启动服务前先创建server/config.yaml, 数据库部分配置如下
 ```shell script
 # 数据库配置
 mysql:
@@ -60,9 +49,21 @@ mysql:
 
 3. 初始化数据库
 ```go
-windows执行以下脚本, 初始化数据库
-
+# windows执行以下脚本, 初始化数据库
 init_db.bat
+```
+
+4. 启动服务
+```go
+# 启动后端
+cd kubespace/server
+go run main.go
+
+# 启动前端
+cd kubespace/web
+# 安装依赖
+npm install --registry=https://registry.npm.taobao.org
+npm run dev
 ```
 
 #### 目前已经实现的功能
