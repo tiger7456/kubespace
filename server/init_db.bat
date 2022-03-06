@@ -11,5 +11,5 @@ go build -o gva.exe cmd/main.go
 gva.exe initdb
 @echo ##########Use gva.exe to initialize data successfully#############
 @echo ##########Deleting gva.exe########################################
-:: del gva.exe
+del gva.exe
 @echo ##########Deleting gva.exe successfully###########################

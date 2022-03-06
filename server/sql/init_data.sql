@@ -1,18 +1,3 @@
-/*
-Navicat MySQL Data Transfer
-
-Source Server         : 192.168.1.96
-Source Server Version : 50648
-Source Host           : 192.168.1.96:3306
-Source Database       : luban
-
-Target Server Type    : MYSQL
-Target Server Version : 50648
-File Encoding         : 65001
-
-Date: 2022-01-04 15:14:59
-*/
-
 SET FOREIGN_KEY_CHECKS=0;
 
 -- ----------------------------
@@ -415,4 +400,4 @@ CREATE TABLE `users` (
 -- ----------------------------
 -- Records of users
 -- ----------------------------
-INSERT INTO `users` VALUES ('1', '2021-09-18 12:30:28', '2021-09-18 12:30:28', null, 'luban', '$2a$10$zn0dAfLmdIC2ff9dkAN7LezbwUFaHfsR6Aqis/jLHTJFy5rBUeey6', '0', 'luban@qq.com', '', 'http://dnsjia.com/img/avatar.png', '1', '1', '0', null, null);
+INSERT INTO `users` VALUES ('1', '2021-09-18 12:30:28', '2021-09-18 12:30:28', null, 'admin', '$2a$10$BjowWxwUyYkZPRTYb8HiSu4ED.v272oVcNiipysjbuYIQcR5AU8sO', '0', 'admin@123.com', '', 'http://dnsjia.com/img/avatar.png', '1', '1', '0', null, null);

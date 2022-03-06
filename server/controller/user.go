@@ -103,6 +103,8 @@ func Login(c *gin.Context) {
 
 	if err := bcrypt.CompareHashAndPassword([]byte(u.Password), []byte(user.Password)); err != nil {
 		// 密码错误
+		fmt.Println("debug 密码: ", user.Password)
+		fmt.Println(err)
 		response.FailWithMessage(response.AuthError, "", c)
 		return
 	}
